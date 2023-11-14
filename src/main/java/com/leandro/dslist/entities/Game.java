@@ -1,4 +1,4 @@
-package com.leandro.dslist.entities.game;
+package com.leandro.dslist.entities;
 
 import java.time.LocalDateTime;
 
