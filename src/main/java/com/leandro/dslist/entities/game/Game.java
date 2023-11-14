@@ -26,7 +26,7 @@ public class Game {
 
   private String title;
 
-  @Column(name = "game-year")
+  @Column(name = "game_year")
   private Integer year;
 
   private String genre;
