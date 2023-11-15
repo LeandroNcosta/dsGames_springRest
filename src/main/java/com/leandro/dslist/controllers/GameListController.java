@@ -21,6 +21,9 @@ public class GameListController {
   @Autowired
   private GameListService gameListService;
 
+  @Autowired
+  private GameService gameService;
+
   @GetMapping
   public ResponseEntity<List<GameListDTO>> gameLists() {
     var gameListsDTO = this.gameListService.findAllGameList();
@@ -28,4 +31,10 @@ public class GameListController {
     return ResponseEntity.ok().body(gameListsDTO);
   }
 
+  @GetMapping("/{listId}/games")
+  public ResponseEntity<List<GameMinDTO>> searchGamesByList(@PathVariable Long listId) {
+    var games = this.gameService.searchGameByList(listId);
+
+    return ResponseEntity.ok().body(games);
+  }
 }
