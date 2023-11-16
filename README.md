@@ -5,9 +5,11 @@ https://dsgames.onrender.com
 The API provides the following endpoints:
 
 ```markdown
-GET /games - Retrieve a list of all data.
+GET /games - Retrieve a list of all games.
 
-GET /lists - get individual data.
+GET /games/{id} - get individual data.
+
+GET /lists
 
 GET /lists/{id}/games
 ```
